@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>德州扑克游戏 · 规则与参照手册</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.02);
+      padding: 3.5rem 2.8rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1.2rem 0.8rem; }
+      .container { padding: 2rem 1.2rem; border-radius: 24px; }
+    }
+
+    /* 标题层级 —— 极简清晰 */
+    h1 {
+      font-weight: 460;
+      font-size: 2.2rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      color: #111;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #5f5f5f;
+      border-left: 3px solid #d4d4d4;
+      padding-left: 1.2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 380;
+    }
+
+    h2 {
+      font-weight: 440;
+      font-size: 1.35rem;
+      margin: 2.2rem 0 1rem 0;
+      letter-spacing: -0.01em;
+      color: #1e1e1e;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-weight: 420;
+      font-size: 1.05rem;
+      margin: 1.6rem 0 0.6rem 0;
+      color: #2e2e2e;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: #2b2b2b;
+    }
+
+    .opening {
+      font-size: 1.05rem;
+      background: #f4f4f2;
+      padding: 1.6rem 1.8rem;
+      border-radius: 20px;
+      margin: 1rem 0 2rem 0;
+      color: #222;
+      font-weight: 370;
+    }
+
+    /* 特点列表 —— 卡片式微 */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.8rem 0;
+    }
+
+    .feature-list li {
+      padding: 1rem 1.2rem;
+      margin-bottom: 0.7rem;
+      background: #f9f9f8;
+      border-radius: 16px;
+      border-left: 4px solid #c8c8c8;
+      transition: background 0.15s;
+    }
+
+    .feature-list li strong {
+      font-weight: 500;
+      color: #1a1a1a;
+      display: inline-block;
+      min-width: 4.2rem;
+    }
+
+    .feature-list li:hover {
+      background: #f1f1ef;
+    }
+
+    /* 引用 / 提示块 */
+    .note-box {
+      background: #f0efed;
+      padding: 1.5rem 1.8rem;
+      border-radius: 20px;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+      border: 1px solid #e3e1de;
+    }
+
+    .note-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-summary {
+      background: #ffffff;
+      border: 1px solid #e6e4e0;
+      border-radius: 18px;
+      padding: 1.5rem 1.8rem;
+      margin: 2.2rem 0 1.8rem 0;
+    }
+
+    .faq-summary dt {
+      font-weight: 480;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-summary dd {
+      margin-left: 0.4rem;
+      color: #4b4b4b;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #1e4366;
+      text-decoration: none;
+      border-bottom: 1px solid #b3c9de;
+      padding-bottom: 0.06rem;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: #0a1f33;
+      border-bottom-color: #1e4366;
+    }
+
+    .footer-note {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eae9e6;
+      font-size: 0.85rem;
+      color: #6c6c6b;
+      text-align: center;
+    }
+
+    .fine-print {
+      color: #848482;
+      font-size: 0.8rem;
+      margin-top: 1.8rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>牌桌笔记</h1>
+    <div class="subhead">从日常查询、对照到延伸阅读 · 一份关于德州扑克游戏的简明参照</div>
+
+    <!-- 开场短句 -->
+    <div class="opening">
+      在扑克变体之中，<span style="border-bottom: 1px solid #bbb;">德州扑克</span>因其信息层级与决策深度，成为许多牌手持续翻阅规则、调整策略的核心对象。以下内容并非新手教程，而是一份侧重快速对照与概念厘清的辅助页。
+    </div>
+
+    <p>对于频繁参与现金局或锦标赛的玩家，手牌强度记忆、位置优势判断、底池赔率估算构成了最基础的查询需求。而进阶场景中，翻前范围构建、翻后下注尺度、ICM 压力下的弃牌率计算，往往需要更系统的参照。本页整理了常见查询方向与对应调整思路，供日常复盘时快速定位。</p>
+
+    <h2>日常查询 · 对照面板</h2>
+    <p>以下场景覆盖了多数中级别玩家在 session 中反复出现的信息需求。每一条均指向特定决策环节的核查要点。</p>
+
+    <ul class="feature-list">
+      <li><strong>翻前范围</strong> — 针对不同位置与底池深度，推荐起手牌 top 15% / 25% / 40% 的边界样例，以及针对 3-bet 与 4-bet 情境的调整参照。</li>
+      <li><strong>翻后下注</strong> — 持续下注频率（c-bet 65%  vs. 45% 干湿面）、转牌与河牌的超池/小注适用条件，以及面对过牌-加注的防守频率建议。</li>
+      <li><strong>底池赔率</strong> — 直接赔率与隐含赔率的快速换算表（非满员桌常见尺度），附带听牌概率与所需胜率的近似对应。</li>
+      <li><strong>锦标赛 ICM</strong> — 钱圈边缘、最终桌短码、泡沫期的 push/fold 阈值参考，以及大筹码 vs. 短筹码的挤压范围差异。</li>
+      <li><strong>对手类型</strong> — 紧凶、松凶、被动跟注站三类风格对应的剥削策略摘要：针对不同翻前范围漏洞的调整框架。</li>
+    </ul>
+
+    <p>以上条目中涉及的许多基础概念与动态均衡，在持续更新的 <a href="https://official-dezhougames.com">德州扑克游戏</a> 资料页中有更详细的展开与图表对照。建议将本页与原始规则说明配合使用，以获得更完整的策略脉络。</p>
+
+    <h2>延伸阅读 · 关键区分点</h2>
+    <p>在查阅策略内容时，新手与中级玩家常忽略以下三组概念差异。将其单独列出，有助于减少对照时的混淆。</p>
+
+    <div class="note-box">
+      <p>◈ <strong>GTO 与剥削策略</strong> — 前者追求不可被利用的均衡，后者针对对手具体漏洞。日常 session 中建议以剥削为主，但定期回看 GTO 基线，防止过度偏离。</p>
+      <p>◈ <strong>翻前范围 vs. 翻后范围</strong> — 翻前范围由位置与底池结构决定；翻后范围则受牌面结构、下注历史、阻断牌影响。不要将翻前百分比直接套用至翻后。</p>
+      <p>◈ <strong>胜率与底池权益实现</strong> — 手牌的真实权益往往小于摊牌胜率，因为弃牌率、位置、后续街的决策空间都会降低实现程度。尤其在多路底池，权益实现非常依赖位置与范围优势。</p>
+    </div>
+
+    <h2>FAQ 摘要 · 查阅中常见疑惑</h2>
+    <dl class="faq-summary">
+      <dt>Q：翻前 3-bet 范围的参考底线是什么？</dt>
+      <dd>A：对位 tight 选手，约在 7%–9%（QQ+/AK + 少量 A5s/A4s）；对位 loose 选手可扩展至 12%–14%，并加入更多同花连张。</dd>
+
+      <dt>Q：c-bet 频率基础值是多少？</dt>
+      <dd>A：单挑底池、无位置劣势时，翻牌约 70%–80%；转牌降低至 55%–65%；河牌依据成牌率与阻断牌调整。多人底池应显著降低。</dd>
+
+      <dt>Q：隐含赔率在实战中如何快速估算？</dt>
+      <dd>A：标准公式 (跟注额 / (跟注后底池 + 剩余有效筹码))，但简易做法：若有效筹码 > 10 倍跟注额，通常隐含赔率充足；若 < 4 倍，则主要依赖直接赔率。</dd>
+    </dl>
+
+    <p>以上 FAQ 主要针对日常查询中反复出现的计算点。完整赔率表、范围图表、位置策略对照，可参考 <a href="https://official-dezhougames.com">德州扑克游戏</a> 的规则与策略章节，其中包含近期更新的翻前范围示例（6 人桌 / 9 人桌）及翻后下注尺度指南。</p>
+
+    <h2>温和收束 · 从查阅到实践</h2>
+    <p>信息密度与决策质量之间，始终存在一条由经验与复盘填充的间隙。本页仅作为快速索引与概念校准之用，不替代实际牌桌练习与针对性分析。无论你是初次系统梳理，还是已有一定积累，都建议将查阅时间控制在 session 之前或之后，而非在牌桌上临时对照。策略的可靠感来自持续修正，而非一次性资料收集。</p>
+
+    <p style="margin-top: 1.8rem;">最后保留一条简单提醒：在 <a href="https://official-dezhougames.com">德州扑克游戏</a> 的规则说明与常见变体介绍中，可以找到关于限注、无限注、以及混合模式的精确界定，适合作为不同规则体系之间的桥梁。祝桌上思路清晰，修正有据。</p>
+
+    <div class="footer-note">
+      本页内容仅供信息对照与学习延伸 · 不构成具体操作建议
+    </div>
+    <div class="fine-print">
+      · 日常查询 · 延伸阅读 · 温和校准 ·
+    </div>
+  </div>
+</body>
+</html>
